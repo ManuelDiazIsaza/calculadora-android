@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:id="@+id/resultado"
+        android:layout_width="225dp"
+        android:layout_height="53dp"
+        android:text=""
+        android:textAlignment="textEnd"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.913"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.025" />
+
+    <androidx.gridlayout.widget.GridLayout
+        android:layout_width="360dp"
+        android:layout_height="350dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:columnCount="4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resultado"
+        app:rowCount="7">
+
+        <Button
+            android:id="@+id/but0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="but0"
+            android:text="@string/but0"
+            app:layout_column="1"
+            app:layout_row="6" />
+
+        <Button
+            android:id="@+id/but1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="but1"
+            android:text="@string/but1"
+            app:layout_column="0"
+            app:layout_row="5" />
+
+        <Button
+            android:id="@+id/but2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="but2"
+            android:text="@string/but2"
+            app:layout_column="1"
+            app:layout_row="5" />
+
+        <Button
+            android:id="@+id/but3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="but3"
+            android:text="@string/but3"
+            app:layout_column="2"
+            app:layout_row="5" />
+
+        <Button
+            android:id="@+id/but4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="but4"
+            android:text="@string/but4"
+            app:layout_column="0"
+            app:layout_row="4" />
+
+        <Button
+            android:id="@+id/but5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="but5"
+            android:text="@string/but5"
+            app:layout_column="1"
+            app:layout_row="4" />
+
+        <Button
+            android:id="@+id/but6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="but6"
+            android:text="@string/but6"
+            app:layout_column="2"
+            app:layout_row="4" />
+
+        <Button
+            android:id="@+id/but7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="but7"
+            android:text="@string/but7"
+            app:layout_column="0"
+            app:layout_row="3" />
+
+        <Button
+            android:id="@+id/but8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="but8"
+            android:text="@string/but8"
+            app:layout_column="1"
+            app:layout_row="3" />
+
+        <Button
+            android:id="@+id/but9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="but9"
+            android:text="@string/but9"
+            app:layout_column="2"
+            app:layout_row="3" />
+
+        <Button
+            android:id="@+id/butSuma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="capturaOpe"
+            android:text="@string/butAdd"
+            app:layout_column="3"
+            app:layout_row="5" />
+
+        <Button
+            android:id="@+id/butResta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="capturaOpe"
+            android:text="@string/butRest"
+            app:layout_column="3"
+            app:layout_row="4" />
+
+        <Button
+            android:id="@+id/butMul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="capturaOpe"
+            android:text="@string/butMult"
+            app:layout_column="3"
+            app:layout_row="3" />
+
+        <Button
+            android:id="@+id/butDiv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="capturaOpe"
+            android:text="@string/butDiv"
+            app:layout_column="3"
+            app:layout_row="2" />
+
+        <Button
+            android:id="@+id/cuadrado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="cuadrado"
+            android:text="@string/butCuadrado"
+            app:layout_column="2"
+            app:layout_row="2" />
+
+        <Button
+            android:id="@+id/butPotencia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="capturaOpe"
+            android:text="@string/butPotencia"
+            app:layout_column="2"
+            app:layout_row="1" />
+
+        <Button
+            android:id="@+id/butRaizCuadrada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="raizCuadrada"
+            android:text="@string/butRaiz"
+            app:layout_column="1"
+            app:layout_row="1" />
+
+        <Button
+            android:id="@+id/butDel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="delete"
+            android:text="@string/butDelete"
+            app:layout_column="1"
+            app:layout_row="2" />
+
+        <Button
+            android:id="@+id/butClear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="clear"
+            android:text="@string/butClear"
+            app:layout_column="0"
+            app:layout_row="2" />
+
+        <Button
+            android:id="@+id/butEqual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="butEqual"
+            android:text="@string/butEqual"
+            app:layout_column="3"
+            app:layout_row="6" />
+
+        <Button
+            android:id="@+id/butPoint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="butPoint"
+            android:text="@string/butPoint"
+            app:layout_column="2"
+            app:layout_row="6" />
+
+        <Button
+            android:id="@+id/butMClear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="butMC"
+            android:text="@string/butMClear"
+            app:layout_column="0"
+            app:layout_row="0" />
+
+        <Button
+            android:id="@+id/butMadd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="butMadd"
+            android:text="@string/butMadd"
+            app:layout_column="1"
+            app:layout_row="0" />
+
+        <Button
+            android:id="@+id/butMrecover"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="butMrecovery"
+            android:text="@string/butMrecover"
+            app:layout_column="2"
+            app:layout_row="0" />
+
+
+    </androidx.gridlayout.widget.GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

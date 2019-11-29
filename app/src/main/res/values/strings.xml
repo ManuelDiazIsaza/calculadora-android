@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Calculadora Manuel Diaz</string>
+    <string name="action_settings">Settings</string>
+    <string name="but1">1</string>
+    <string name="but2">2</string>
+    <string name="but3">3</string>
+    <string name="but4">4</string>
+    <string name="but5">5</string>
+    <string name="but6">6</string>
+    <string name="but7">7</string>
+    <string name="but8">8</string>
+    <string name="but9">9</string>
+    <string name="but0">0</string>
+    <string name="butEqual">=</string>
+    <string name="butAdd">+</string>
+    <string name="butRest">-</string>
+    <string name="butMult">*</string>
+    <string name="butDiv">/</string>
+    <string name="butCuadrado">x2</string>
+    <string name="butDelete">DEL</string>
+    <string name="butClear">Clear</string>
+    <string name="butPotencia">Potencia</string>
+    <string name="butRaiz">Raiz</string>
+    <string name="butPoint">.</string>
+    <string name="butMClear">MC</string>
+    <string name="butMadd">M+</string>
+    <string name="butMrecover">MR</string>
+</resources>
