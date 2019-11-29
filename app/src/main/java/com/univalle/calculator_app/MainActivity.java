@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        // este es el boton que esta abajo a la derecha que sirve para compartir el resultado y el autor del programa
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //aqui se recuperan los savedinstances
         if(savedInstanceState!=null){
             cajaRes = (TextView)findViewById(R.id.resultado);
             cajaRes.setText(savedInstanceState.getString("cajaRes"));
@@ -64,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+    //aqui se graban los datos que se desean recuperar cuando hay un cambio en la configuracion del dispositivo
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
@@ -89,6 +92,8 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    //Aqui estan los metodos de los botones numericos
     public void butPoint (View view){
         String str = cajaRes.getText().toString();
         str = str + ".";
@@ -155,6 +160,7 @@ public class MainActivity extends AppCompatActivity {
         cajaRes.setText(str);
     }
 
+    //aqui capturamos la operacion que el usuario desea hacer despues de insertar el primer numero
     public void capturaOpe(View view){
         try{
             num1 = Double.parseDouble(cajaRes.getText().toString());
@@ -181,6 +187,7 @@ public class MainActivity extends AppCompatActivity {
         }catch (Exception e){}
     }
 
+    //funcion para elevar al cuadrado el numero ingresado
     public void cuadrado(View view){
         try{
             num1 = Double.parseDouble(cajaRes.getText().toString());
@@ -188,6 +195,7 @@ public class MainActivity extends AppCompatActivity {
         }catch (Exception e){}
     }
 
+    //funcion para sacar la raiz cuadrada del numero ingresado
     public void raizCuadrada(View view){
         try{
             num1 = Double.parseDouble(cajaRes.getText().toString());
@@ -195,6 +203,8 @@ public class MainActivity extends AppCompatActivity {
         }catch (Exception e){}
 
     }
+
+    //funcion para limpiar las variables de la calculadora excepto la memoria
     public void clear(View view){
         num1 = 0;
         num2 = 0;
@@ -202,12 +212,14 @@ public class MainActivity extends AppCompatActivity {
         result = 0;
     }
 
+    //funcion para borrar el ultimo digito de la casilla principal.
     public void delete (View v){
         if (!cajaRes.getText().toString().equals("")){
             cajaRes.setText(cajaRes.getText().subSequence(0,cajaRes.getText().length()-1)+"");
         }
     }
 
+    //funcion del boton igual, que hace la operacion
     public void butEqual(View view){
         try{
             if(cambia){
@@ -233,9 +245,10 @@ public class MainActivity extends AppCompatActivity {
         }catch (Exception e){}
         cajaRes.setText(String.valueOf(result));
         num1 = result;
-        cambia = false;
+        cambia = false; // utilice este cambia por si de pronto tu pones 3 + 2, y le das muchas veces igual para que siga sumando de 2 en 2
     }
 
+    //funciones para la memoria
     public void butMC(View view){
         memoria = 0;
     }
